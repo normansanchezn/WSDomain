@@ -45,7 +45,6 @@ public struct Period: Sendable, Codable, Equatable, Hashable, Identifiable {
                 guard let end = calendar.date(byAdding: .day, value: 15, to: start) else { return nil }
                 return DateInterval(start: start, end: end)
             } else {
-                // second half ends at next month day 1
                 var next = DateComponents()
                 next.year = year
                 next.month = month
